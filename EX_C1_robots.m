@@ -1,3 +1,8 @@
+% Example: Simulating the motion of the moving robots in the
+% two-dimensional plane.
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
+
 N = 9;
 ga = -1;
 

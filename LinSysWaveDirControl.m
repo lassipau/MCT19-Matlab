@@ -14,7 +14,8 @@
 % approximate wave profile in the basis spanned by the eigenvectors of the
 % second order differential operator. For plotting the solution the values
 % of these linear combinations are evaluated at a spatial grid on [0,1].
-
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 % Size of the numerical approximation
@@ -58,7 +59,7 @@ Nx = 160;
 
 % Choose the input function
 u_fun = @(t) zeros(size(t));
-u_fun = @(t) ones(size(t));
+% u_fun = @(t) ones(size(t));
 % u_fun = @(t) sin(t);
 
 

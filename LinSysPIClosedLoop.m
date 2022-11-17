@@ -10,6 +10,8 @@ function [Ae,Be,Ce,De] = LinSysPIClosedLoop(A,B,C,K_P,eps)
 % Parameters: 
 % A = nxn-matrix, B = nxm-matrix, C = pxn-matrix, 
 % K_P = mxp-matrix, eps>0
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 p = size(C,1);
 m = size(B,2);

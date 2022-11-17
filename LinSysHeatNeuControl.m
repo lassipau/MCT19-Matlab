@@ -11,6 +11,8 @@
 % The approximation has the form x'(t)=A_N*x(t), where state of x(t) the 
 % is a vector of the values (v(0,t),v(h,t),v(2*h,t), ..., v(1-h,t), v(1,t))^T for
 % each time t. The length of the vector is N, and h=1/(N-1). 
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 % Size of the numerical approximation

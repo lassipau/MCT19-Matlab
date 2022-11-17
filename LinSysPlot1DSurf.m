@@ -1,4 +1,4 @@
-function LinSysPlot1DHeatSurf(state,spgrid,tgrid,zlims)
+function LinSysPlot1DSurf(state,spgrid,tgrid,zlims)
 % function LinSysPlot1DHeatSurf(state,spgrid,tgrid,zlims,BCtype)
 %
 % Plot the solution (temperature) of the controlled 1D heat equation
@@ -7,6 +7,8 @@ function LinSysPlot1DHeatSurf(state,spgrid,tgrid,zlims)
 % spgrid = spatial grid
 % tgrid = grid for time
 % zlims = limits for the z-axis (optional)
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 if max(max(abs(imag(state)))) > 1e-8

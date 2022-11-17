@@ -1,5 +1,7 @@
 function [A_K,B_K,C_K,D_K] = LinSysOutputFB(A,B,C,D,K)
 % function [A_K,B_K,C_K,D_K] = LinSysOutputFB(A,B,C,D,K)
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 p = size(C,1);
 IDK = eye(p)-D*K;

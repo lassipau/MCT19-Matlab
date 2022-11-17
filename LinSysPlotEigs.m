@@ -3,6 +3,8 @@ function LinSysPlotEigs(A,axlim)
 %
 % Plots the eigenvalues of A
 % If 'axlim' is not given, limits determined from the spectrum. 
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 Aspec = eig(full(A));
 

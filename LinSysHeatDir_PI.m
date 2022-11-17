@@ -12,10 +12,12 @@
 % each time t. The length of the vector is N, and h=1/(N+1). The values at
 % the boundaries v(0,t) and v(1,t) are not chosen as variables, since they
 % are always zero.
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 % Size of the numerical approximation
-N = 35;
+N = 50;
 % The heat conductivity of the material
 alpha = .3;
 
@@ -67,7 +69,7 @@ K_P = 0;
 % PK0 = ...
 
 % The value of epsilon, can use trial-and-error
-epsgain = .5;
+epsgain = .8;
 
 
 
@@ -107,9 +109,9 @@ x0 = x0fun(spgridfull(2:(N+1))).';
 % Compute PK0 based on the numerical approximation. Should always use
 % DIFFERENT numerical approximations for computing P_{K_P}(0) and the
 % simulation!
-PK0 = -CN*((AN+BN*K_P*CN)\BN);
+% PK0 = -CN*((AN+BN*K_P*CN)\BN);
 % Explicit value for control on [0.15,0.25] and observation on [0.75,0.85]
-% PK0 = 0.04/alpha;
+PK0 = 0.04/alpha;
 
 [Ae,Be,Ce,De] = LinSysPIClosedLoopInfDim(AN,BN,CN,K_P,PK0,epsgain);
 

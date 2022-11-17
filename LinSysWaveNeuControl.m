@@ -14,6 +14,8 @@
 % approximate wave profile in the basis spanned by the eigenvectors of the
 % second order differential operator. For plotting the solution the values
 % of these linear combinations are evaluated at a spatial grid on [0,1].
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 

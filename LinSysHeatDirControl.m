@@ -13,7 +13,8 @@
 % each time t. The length of the vector is N, and h=1/(N+1). The values at
 % the boundaries v(0,t) and v(1,t) are not chosen as variables, since they
 % are always zero.
-
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 % Size of the numerical approximation
 N = 25;
@@ -28,6 +29,8 @@ alpha = .3;
 % Define the input profile function b(x) and the output weight function
 % c(x)
 b_fun = @(xi) 4*(xi>=1/4).*(xi<=1/2);
+b_fun = @(xi) 4*(xi>=0).*(xi<=1/4);
+% b_fun = @(xi) 1-xi;
 c_fun = @(xi) 4*(xi>=1/2).*(xi<=3/4);
 
 
@@ -42,13 +45,14 @@ x0fun = @(xi) 3*xi.*(1-xi);
 
 
 % Choose the simulation interval, 
-tspan = [0,3];
+tspan = [0,10];
 % Choose the numbers of points in t- and x-directions for plotting
-Nt = 200;
+Nt = 80;
 
 % Choose the input function
 u_fun = @(t) zeros(size(t));
-% u_fun = @(t) sin(t);
+u_fun = @(t) ones(size(t));
+u_fun = @(t) sin(t);
 
 
 

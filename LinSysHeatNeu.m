@@ -9,7 +9,8 @@
 % The approximation has the form x'(t)=A_N*x(t), where state of x(t) the 
 % is a vector of the values (v(0,t),v(h,t),v(2*h,t), ..., v(1-h,t), v(1,t))^T for
 % each time t. The length of the vector is N, and h=1/(N-1). 
-
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 % Size of the numerical approximation
 N = 30;
@@ -38,8 +39,8 @@ x0fun = @(xi) xi.*(1-xi);
 % The "source function" of the heat equation, you can define your own! The
 % input parameter 'xi' is the spatial variable (this should accept a vector 
 % input) and t is the time.
-% source_fun = @(xi,t) zeros(size(xi));
-source_fun = @(xi,t) ones(size(xi))*sin(t);
+source_fun = @(xi,t) zeros(size(xi));
+% source_fun = @(xi,t) ones(size(xi))*sin(t);
 % source_fun = @(xi,t) xi.*(1-xi).^2;
 % source_fun = @(xi,t) (1/2-abs(xi-1/2))*t;
 % source_fun = @(xi,t) 5*xi.*(1-xi).^3.*(t<5);
@@ -53,7 +54,7 @@ x0 = x0fun(spgrid).';
 % Simulate the approximation of the heat equation
 
 % Define the time-interval of the simulation
-tspan = [0,20];
+tspan = [0,5];
 
 
 odefun = @(t,x) AN*x + source_fun(spgrid.',t);
@@ -66,7 +67,7 @@ xx = deval(sol,tgrid);
 % solution at \xi=0 and \xi=1 to the matrix 'xx' 
 figure(1)
 colormap jet
-LinSysPlot1DHeatSurf(xx,spgrid,tgrid)
+LinSysPlot1DSurf(xx,spgrid,tgrid)
 
 
 %%

@@ -8,6 +8,8 @@ function [MovAnim,zlims] = LinSysAnimate1D(state,spgrid,tgrid,Tpause,record,zlim
 % Tpause = pause time in the animation
 % record = 1 if animation is recorded into a movie
 % zlims = limits for the z-axis (optional)
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 
 if max(max(abs(imag(state)))) > 1e-8

@@ -11,6 +11,8 @@ function [Ae,Be,Ce,De] = LinSysPIClosedLoopInfDim(A,B,C,K_P,PK0,epsgain)
 % A = nxn-matrix, B = nxm-matrix, C = pxn-matrix, 
 % K_P = mxp-matrix, eps>0
 % PK0 = pxm-matrix (an approximate) value of P_{K_P}(0)
+%
+% Copyright (C) 2019 by Lassi Paunonen (lassi.paunonen@tuni.fi)
 
 p = size(C,1);
 m = size(B,2);
